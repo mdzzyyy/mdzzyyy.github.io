@@ -1,8 +1,21 @@
 #KVO
+
+---
+layout:     post   				    # 使用的布局（不需要改）
+title:      KVO				# 标题 
+subtitle:   KVO	 #副标题
+date:       2020-01-16			# 时间
+author:     bkun 						# 作者
+header-img: img/post-bg-2015.jpg 	#这篇文章标题背景图片
+catalog: true 						# 是否归档
+tags:								#标签
+    - Obj-c
+---
+
+
 ##KVO实现机制
 **当你观察一个对象时，一个新的类会动态被创建。这个类继承自该对象的原本的类，并重写了被观察属性的 setter 方法。重写的 setter 方法会负责在调用原 setter 方法之前和之后，通知所有观察对象值得更改。最后把这个对象的 isa（isa指针告诉运行时系统这个对象的类是什么） 指针只想这个新创建的子类，对象就变成了新创建的子类的实例。**
 
-![pic](/Users/admin/Desktop/鲍琨/笔记/resource/屏幕快照 2017-09-05 上午9.47.06.png)
 
 键值观察通知依赖于 NSObject 的两个方法：**willChangValueForKey:**和 **didChangeValueForKey:**。
 
